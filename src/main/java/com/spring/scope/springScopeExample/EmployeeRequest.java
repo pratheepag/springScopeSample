@@ -3,11 +3,13 @@ package com.spring.scope.springScopeExample;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Component
-//@Scope("singleton")
-//@Scope("prototype")
-public class Employee {
+
+//@RequestScope
+@SessionScope
+public class EmployeeRequest {
 	private int id;
 	private String name;
 	private long salary;
